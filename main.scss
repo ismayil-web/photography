@@ -1,0 +1,154 @@
+@import "../common/_variables.scss";
+@import "../common/_breakpoints.scss";
+@import "../common/_functions.scss";
+@import "../common/common.scss";
+body {
+  color: $black;
+  background-color: $white;
+
+  .innerSection {
+    width: 100%;
+    max-width: $sectionMaxWidth;
+    margin: 0 auto;
+  }
+
+  #mainContainer {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: inherit;
+
+    //Usage : If the header is fixed, every page should have a top margin//
+    .pageTopSpace {
+      padding-top: 3rem;
+
+      @include media-lg {
+        padding-top: 4rem;
+      }
+    }
+
+    //Header//
+    #headerSection {
+      .logo{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 0;
+        img{
+        width: 40%;
+
+        @include media-lg{
+          width: 12%;
+        }
+      }
+    }
+    }
+    }
+
+    //Footer//
+    #footerSection{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top: 3px solid $borderGray;
+      background-color: $white;
+
+    
+      .footerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+
+        img{
+        width: 30%;
+        @include media-lg{
+          width: 8%;
+        }
+      }
+    }
+    .socialIcon{
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      img{
+        width: 8%;
+      }
+    }
+    .locationDiv{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      
+      .location{
+        margin-bottom: 0;
+        font-weight: 500;
+        font-family: $font-family1;
+      }
+
+      .flag{
+        width: 5%;
+      }
+    }
+
+    .menuDiv{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: $baseline;
+
+      @include media-lg{
+        flex-direction: row;
+      }
+      a{  
+        font-weight: 700;
+        font-family: $font-family2;
+        color: $color1;
+
+        &:hover{
+          color: $black;
+        }
+        @include media-lg{
+          width: 220px;
+        }
+      }
+    }
+    .copy{
+      width: 100%;
+      border-top: 3px solid $borderGray;
+    p{
+      margin-bottom: $baseline;
+      font-size: $s2;
+      text-align: center;
+      opacity: 0.7;
+
+      @include media-lg{
+        font-size: $baseline;
+      }
+    }
+  }
+  }
+    }
+
+
+//Usage : Create a common layout style for repeating layouts//
+
+//Headings//
+.heading {
+  color: $black;
+}
+
+.subHeading {
+  color: $black;
+}

@@ -1,0 +1,38 @@
+/*Primary Colors*/
+$color1: #102d47;
+$color2: #79BCFF;
+$color3: #B9DCFF;
+$color4:#ff968f;
+$color5:#fff8f6;
+/*Secondary Colors*/
+$white: #ffffff;
+$lightGray: #f8f8ff;
+$borderGray: #ebedf3;
+$visibleGray: #e0e0e0;
+$textGray: #909294;
+$gray: #5d5e5f;
+$darkGray: #242323;
+$black: #1b1b1b;
+
+/*Form Colors*/
+$red: #ec4c4c;
+$green: #3cc274;
+$blue: #546bd4;
+$yellow: #f5a905;
+$fGray: #919191;
+$inputBorder:#eef0f77a;
+$inputColor1:#fbfcff;
+$inputColor2:#b4bfee;
+$inputColor3:#97aaff;
+$inputColor4:#8295ff;
+
+/*Gradients*/
+$gradient1:linear-gradient(to right top, #05265a, #052961, #052b67, #052e6e, #063175, #06337a, #063680, #063885, #063a8a, #063c90, #063e95, #06409b);
+$gradient2:linear-gradient(to right top, #102d47, #133655, #174063, #1a4972, #1e5381);
+$gradient3:linear-gradient(to right top, #eff3ff, #edf2ff, #ecf0ff, #eaefff, #e8eeff, #e6ecff, #e3ebff, #e1e9ff, #dee7ff, #dbe4ff, #d8e2ff, #d5dfff);
+$gradient4: linear-gradient(to right top, #f8f8fb, #f8f8fc, #f8f8fd, #f7f9fd, #f7f9fe, #f6f9fe, #f5f8ff, #f4f8ff, #f3f7ff, #f2f6ff, #f1f5ff, #f0f4ff);
+
+/*Transitions*/
+$transition1 : all .3s cubic-bezier(0, 0, .5, 1);
+$transition2 : 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+$transition3 : 0.7s cubic-bezier(0.37, 0, 0.63, 1);

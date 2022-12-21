@@ -1,0 +1,305 @@
+@import "_variables.scss";
+@import "_breakpoints.scss";
+@import "_functions.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    position: relative;
+    outline-style: none;
+    line-height: 1;
+    cursor: context-menu;
+
+    &:before,
+    :after {
+        font-family: inherit;
+    }
+}
+
+html {
+    @include interpolate(font-size, 300px, 5000px, $baseFontMob, $baseFontPC);
+    width: 100vw;
+    max-width: 100%;
+    display: block;
+    scroll-behavior: smooth;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.bodyIntro {
+    height: 100vh !important;
+    overflow: hidden !important;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    line-height: 1;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
+}
+
+
+.m0 {
+    margin: 0 !important;
+}
+
+.p0 {
+    padding: 0 !important;
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: intrinsic;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.bgCover {
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bText {
+    font-weight: 800;
+}
+
+.nText {
+    font-weight: 400;
+}
+
+.lText {
+    font-weight: 300;
+}
+
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+[type="button"] {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: $baseline;
+    font-size: $baseline;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: $font-3;
+    font-weight: 700;
+
+    @include media-md {
+        font-size: $font-2;
+    }
+
+    @include media-lg {
+        font-size: $font-1;
+    }
+
+    @include media-xl {
+        font-size: $font-lg;
+    }
+
+    @include media-xxl {
+        font-size: $font-xl;
+    }
+}
+
+h2 {
+    font-size: $font-4;
+    font-weight: 700;
+
+    @include media-md {
+        font-size: $font-3;
+    }
+
+    @include media-lg {
+        font-size: $font-2;
+    }
+
+    @include media-xl {
+        font-size: $font-1;
+    }
+
+    @include media-xxl {
+        font-size: $font-lg;
+    }
+
+}
+
+h3 {
+    font-size: $font-3;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: $font-4;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: $font-5;
+    font-weight: 500;
+}
+
+
+table {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    tr {
+        display: table-row;
+    }
+
+    td {
+        text-align: left;
+        font-weight: 300;
+    }
+}
+
+
+
+//Scroll Bar//
+::-webkit-scrollbar {
+    width: 10px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $textGray;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: $textGray;
+}
+
+//Section Padding - Horizontal//
+.section {
+    width: 100%;
+    height: auto;
+    clear: both;
+    padding-left: $baseline;
+    padding-right: $baseline;
+    z-index: 1;
+
+    @include media-sm {
+        padding-left: $xsSpacing;
+        padding-right: $xsSpacing;
+    }
+
+    @include media-md {
+        padding-left: $mdSpacing;
+        padding-right: $mdSpacing;
+    }
+
+    @include media-lg {
+        padding-left: $lgSpacing;
+        padding-right: $lgSpacing;
+    }
+
+    @include media-xl {
+        padding-left: $xlSpacing;
+        padding-right: $xlSpacing;
+    }
+}
+
+//Section Padding - Vertical//
+.sectionPadding {
+    padding-bottom: $xsSpacing;
+    padding-top: $xsSpacing;
+
+    @include media-sm {
+        padding-top: $smSpacing;
+        padding-bottom: $smSpacing;
+    }
+
+    @include media-md {
+        padding-top: $mdSpacing;
+        padding-bottom: $mdSpacing;
+    }
+
+    @include media-xl {
+        padding-top: $lgSpacing;
+        padding-bottom: $lgSpacing;
+    }
+
+}
+
+.sectionPaddingTop {
+    padding-top: $xsSpacing;
+
+    @include media-sm {
+        padding-top: $smSpacing;
+    }
+
+    @include media-md {
+        padding-top: $mdSpacing;
+    }
+
+    @include media-xl {
+        padding-top: $lgSpacing;
+    }
+}
+
+.sectionPaddingBottom {
+    padding-bottom: $xsSpacing;
+
+    @include media-sm {
+        padding-bottom: $smSpacing;
+    }
+
+    @include media-md {
+        padding-bottom: $mdSpacing;
+    }
+
+    @include media-xl {
+        padding-bottom: $lgSpacing;
+    }
+}
